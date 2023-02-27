@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Math Game</title>
+
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+
+  <body>
+
+    <py-config>
+        [loadPyodide({ fullStdLib : true })]
+        packages = ["inputimeout"]
+      [[fetch]]
+      from = "https://pyscript.net/examples/"
+      files = ["utils.py"]
+      [[fetch]]
+      from = "https://gist.githubusercontent.com/ZachLTech/bd153a097b4975d7f6e6cf6967be8769/raw/178cd21af0db7177419bf6fef8554dc305cf126d"
+      files = ["TimesTables.py"]
+      [[fetch]]
+      from = "https://gist.githubusercontent.com/ZachLTech/bd153a097b4975d7f6e6cf6967be8769/raw/178cd21af0db7177419bf6fef8554dc305cf126d"
+      files = ["Functions.py"]
+      [[fetch]]
+      from = "https://gist.githubusercontent.com/ZachLTech/bd153a097b4975d7f6e6cf6967be8769/raw/178cd21af0db7177419bf6fef8554dc305cf126d"
+      files = ["gameclass.py"]
+      [[fetch]]
+      from = "https://gist.githubusercontent.com/ZachLTech/bd153a097b4975d7f6e6cf6967be8769/raw/178cd21af0db7177419bf6fef8554dc305cf126d"
+      files = ["main.py"]
+    </py-config>
+    <py-script>
+        from gameclass import Game
+    </py-script>
+    <section>
+      <div class="text-center w-full mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 uppercase tracking-tight">Math Game</h1>
+      </div>
+      <div>
+        <button type="button" onclick="Start()">Start</button>
+      </div>
+
+    </section>
+  </body>
+</html>
