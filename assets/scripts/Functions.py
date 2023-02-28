@@ -1,6 +1,6 @@
 import random
 from TimesTables import MultiplesQsAndAs
-from inputimeout import inputimeout
+from pytimedinput import timedInput
 
 def tmsg(r):
     print(f"Times up! The Correct answer is: {MultiplesQsAndAs[r +1]}\n\n")
@@ -20,10 +20,10 @@ def refresh():
 def refreshT(limit):
     while(True):
         randomqanda = random.randrange(0,104,2)
-        try:
-            question = inputimeout(prompt=MultiplesQsAndAs[randomqanda], timeout=limit)
-        except Exception:
-            print(f"Time Up!\nThe Correct answer is: {MultiplesQsAndAs[randomqanda +1]}\n\n")
+
+        question, timedOut = timedInput(prompt=MultiplesQsAndAs[randomqanda], timeout=limit, resetOnInput= False)
+        if(timedOut):
+            print(f"Times Up!\nThe Correct answer is: {MultiplesQsAndAs[randomqanda +1]}\n\n")
             continue
         question = int(question)
         if(question == MultiplesQsAndAs[randomqanda +1]):
@@ -50,10 +50,9 @@ def Natural():
 def NaturalT(limit):
     while(True):
         randomqanda = random.randrange(0,234,2)
-        try:
-            question = inputimeout(prompt=MultiplesQsAndAs[randomqanda], timeout=limit)
-        except Exception:
-            print(f"Time Up!\nThe Correct answer is: {MultiplesQsAndAs[randomqanda +1]}\n\n")
+        question, timedOut = timedInput(prompt=MultiplesQsAndAs[randomqanda], timeout=limit, resetOnInput= False)
+        if(timedOut):
+            print(f"Times Up!\nThe Correct answer is: {MultiplesQsAndAs[randomqanda +1]}\n\n")
             continue
         question = int(question)
         if(question == MultiplesQsAndAs[randomqanda +1]):
@@ -80,10 +79,9 @@ def All():
 def AllT(limit):
     while(True):
         randomqanda = random.randrange(0,363,2)
-        try:
-            question = inputimeout(prompt=MultiplesQsAndAs[randomqanda], timeout=limit)
-        except Exception:
-            print(f"Time Up!\nThe Correct answer is: {MultiplesQsAndAs[randomqanda +1]}\n\n")
+        question, timedOut = timedInput(prompt=MultiplesQsAndAs[randomqanda], timeout=limit, resetOnInput= False)
+        if(timedOut):
+            print(f"Times Up!\nThe Correct answer is: {MultiplesQsAndAs[randomqanda +1]}\n\n")
             continue
         question = int(question)
         if(question == MultiplesQsAndAs[randomqanda +1]):
