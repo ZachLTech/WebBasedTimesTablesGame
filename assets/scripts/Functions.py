@@ -20,12 +20,13 @@ def refresh():
 def refreshT(limit):
     while(True):
         randomqanda = random.randrange(0,104,2)
-
+        limit = int(limit)
         question, timedOut = timedInput(prompt=MultiplesQsAndAs[randomqanda], timeout=limit, resetOnInput= False)
         if(timedOut):
             print(f"Times Up!\nThe Correct answer is: {MultiplesQsAndAs[randomqanda +1]}\n\n")
             continue
         question = int(question)
+        timedOut = int(timedOut)
         if(question == MultiplesQsAndAs[randomqanda +1]):
             print("Correct\n\n")
         elif(question == -1):
@@ -50,11 +51,13 @@ def Natural():
 def NaturalT(limit):
     while(True):
         randomqanda = random.randrange(0,234,2)
+        limit = int(limit)
         question, timedOut = timedInput(prompt=MultiplesQsAndAs[randomqanda], timeout=limit, resetOnInput= False)
         if(timedOut):
             print(f"Times Up!\nThe Correct answer is: {MultiplesQsAndAs[randomqanda +1]}\n\n")
             continue
         question = int(question)
+        timedOut = int(timedOut)
         if(question == MultiplesQsAndAs[randomqanda +1]):
             print("Correct\n\n")
         elif(question == -1):
@@ -79,11 +82,13 @@ def All():
 def AllT(limit):
     while(True):
         randomqanda = random.randrange(0,363,2)
+        limit = int(limit)
         question, timedOut = timedInput(prompt=MultiplesQsAndAs[randomqanda], timeout=limit, resetOnInput= False)
         if(timedOut):
             print(f"Times Up!\nThe Correct answer is: {MultiplesQsAndAs[randomqanda +1]}\n\n")
             continue
         question = int(question)
+        timedOut = int(timedOut)
         if(question == MultiplesQsAndAs[randomqanda +1]):
             print("Correct\n\n")
         elif(question == -1):
