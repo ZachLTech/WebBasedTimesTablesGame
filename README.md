@@ -27,11 +27,8 @@
 - have some sort of congratulations per so many questions correct
 - Make an optional question limit that gets larger with shorter times as you progress through the game (basically lives)
 
-
 - setup a website to put this on 
 - use CSS to make it look good and have a box to run the python 
-    - possibly use tkinter to give it GUI 
-        - or just html css bro
 
 - remake all of it in Javascript or rust...
     - but first i gotta learn those 😐
