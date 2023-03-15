@@ -32,3 +32,6 @@
 - use CSS to make it look good and have a box to run the python 
     - possibly use tkinter to give it GUI 
         - or just html css bro
+
+- remake all of it in Javascript or rust...
+    - but first i gotta learn those 😐
